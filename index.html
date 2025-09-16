@@ -467,6 +467,16 @@
             document.getElementById('uniqueUsersCount').textContent = data.uniqueUsersCount;
             document.getElementById('queryDays').textContent = data.queryParams.days;
 
+            // 更新表格标题
+            const tableHead = document.querySelector('#dataTable thead tr');
+            tableHead.innerHTML = `
+                <th>用户ID</th>
+                <th>用户信息</th>
+                <th>使用数据</th>
+                <th>观看视频</th>
+                <th>记录时间</th>
+            `;
+
             // 生成表格数据
             const tableBody = document.getElementById('tableBody');
             tableBody.innerHTML = '';
